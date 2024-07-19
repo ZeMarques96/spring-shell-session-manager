@@ -15,7 +15,8 @@ public class SetupCommands {
 
     @ShellMethod(key = "start")
     public String start() throws IOException {
-        setup.openTest();
-        return "Google Launched";
+        String stream = setup.openStream();
+        setup.openObs();
+        return "Current programsinitialized: " + stream + " and " + " has been openned.";
     }
 }
